@@ -1,7 +1,7 @@
 import * as THREE from "three"
 import React, { Suspense } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
-import Model from "./Model"
+import Model2 from "./Model2"
 
 function Rig() {
   return useFrame((state) => {
@@ -15,9 +15,9 @@ export default function App() {
     <Canvas concurrent shadowMap camera={{ position: [1, 1.5, 2.5], fov: 50 }}>
       <ambientLight />
       <directionalLight position={[-5, 5, 5]} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} />
-      <group position={[0, -1, 0]}>
+      <group position={[0, 0, 0]}>
         <Suspense fallback={null}>
-          <Model />
+          <Model2 />
         </Suspense>
       </group>
       <mesh rotation={[-0.5 * Math.PI, 0, 0]} position={[0, -1, 0]} receiveShadow>
